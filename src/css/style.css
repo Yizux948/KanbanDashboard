@@ -1,0 +1,45 @@
+@font-face {
+    font-family: Fasthand-Regular;
+    src: url("../fonts/Fasthand/Fasthand-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: Josefin_Sans;
+    src: 
+    url("../fonts/Josefin_Sans/JosefinSans-Italic-VariableFont_wght.ttf") format("truetype"),
+    url("../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf") format("truetype");
+    /* font-style: normal;
+    font-weight: 400; */
+}
+.Fasthand-Regular{
+    font-family: "Fasthand-Regular";
+}
+.Josefin_Sans{
+    font-family: "Josefin_Sans";
+}
+.hover_linear{
+    overflow: hidden;
+    position: relative;
+}
+.hover_linear > span{
+    /* background-color: black; */
+    position: absolute;
+}
+.hover_linear:hover > span{
+    background-color: var(--bs-secondary);
+    position: absolute;
+    transition: 0.5s;
+}
+.hover_linear:hover > i{
+    color: var(--bs-secondary);
+    font-size: 1.5rem;
+    transition: 0.5s;
+}
+.hover_linear:not(:hover) > i{
+    transition: 0.5s;
+}
+.postOptions:hover{
+    color: var(--bs-secondary)
+}
+textarea {
+    resize: none;
+  }

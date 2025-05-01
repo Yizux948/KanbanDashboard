@@ -1,0 +1,41 @@
+<?php
+session_start();
+require_once("database.php");
+$conn = DDBB();
+
+$id = $_GET["id"];
+$sqlSearch = mysqli_query($conn, "SELECT * FROM t_prioritarias WHERE id_priori = '$id'");
+
+while($datosSQL = mysqli_fetch_array($sqlSearch)){
+    $data = [
+        $f_h = date("Y-m-d H:i:s"),
+        $_POST["mod"],
+        $_POST["tiem"],
+        $_POST["tit"],
+        $_POST["dsc"],
+        "Jesus"
+    ];
+}
+
+
+$sql = "INSERT INTO t_prioritarias(f_h, modl, tiempo, tit, dsc, status, persona) VALUES ('$data[0]', '$data[1]', '$data[2]', '$data[3]', '$data[4]', '1', '$data[5]')";
+
+$sql2 = "DELETE FROM t_prioritarias WHERE id_priori = '$id'";
+
+if(mysqli_query($conn, $sql)){
+    $_SESSION["check"] = true;
+}else{
+    $_SESSION["check"] = false;
+}
+
+
+
+
+
+
+
+
+
+header("Location: ../../index.php");
+
+?>
